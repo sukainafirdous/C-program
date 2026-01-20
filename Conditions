@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void guessNumber(int guess) {
+
+int target = 600;
+    if (guess == target) {
+        printf("%d is correct\n",guess);
+    }
+    else{
+        printf("%d is wrong\n",guess);
+    }
+}
+
+int main() {
+    guessNumber(500);
+    guessNumber(600);
+    guessNumber(555);
+}
