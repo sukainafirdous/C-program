@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+  int a = 4;
+  float b = 7.5;
+  double c = 5.50;
+  float sum;
+  sum = a + b + c;
+
+  printf("The sum of a, b and c is %f.", sum);
+  return 0;
+}
