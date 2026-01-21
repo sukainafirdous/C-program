@@ -1,0 +1,17 @@
+   #include <stdio.h>
+   int sum (int num) {
+       int s = 0;
+       while (num > 0) {
+           s = s + (num % 10);
+           num = num / 10;
+       }
+       return s;
+       
+   }
+
+   int main() {
+       printf("%d ",sum(55));
+       printf("%d ",sum(45));
+       printf("%d ",sum(50));
+       return 0;
+   }
