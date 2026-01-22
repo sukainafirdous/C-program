@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+// Define structure
+struct Mobile {
+    int mobileId;
+    char brand[30];
+    char model[30];
+    float price;
+};
+
+int main() {
+    struct Mobile m;
+
+    printf("Enter Mobile ID: ");
+    scanf("%d", &m.mobileId);
+
+    printf("Enter Mobile Brand: ");
+    scanf(" %[^\n]", m.brand);   
+
+    printf("Enter Mobile Model: ");
+    scanf(" %[^\n]", m.model);   
+
+    printf("Enter Mobile Price: ");
+    scanf("%f", &m.price);
+
+    printf("\n--- Mobile Details ---\n");
+    printf("Mobile ID    : %d\n", m.mobileId);
+    printf("Brand        : %s\n", m.brand);
+    printf("Model        : %s\n", m.model);
+    printf("Price        : %.2f\n", m.price);
+
+    return 0;
+}
