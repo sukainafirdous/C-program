@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+struct Course {
+    int courseId;
+    char courseName[50];
+    int duration;        
+    float fees;
+};
+
+int main() {
+    struct Course c;
+
+    printf("Enter Course ID: ");
+    scanf("%d", &c.courseId);
+
+    printf("Enter Course Name: ");
+    scanf(" %[^\n]", c.courseName);   // Read name with spaces
+
+    printf("Enter Course Duration (in months): ");
+    scanf("%d", &c.duration);
+
+    printf("Enter Course Fees: ");
+    scanf("%f", &c.fees);
+
+    printf("\n--- Course Details ---\n");
+    printf("Course ID       : %d\n", c.courseId);
+    printf("Course Name     : %s\n", c.courseName);
+    printf("Duration        : %d months\n", c.duration);
+    printf("Fees            : %.2f\n", c.fees);
+
+    return 0;
+}
