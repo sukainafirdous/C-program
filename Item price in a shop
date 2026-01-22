@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float price[100], search;
+    int found = 0;
+
+    printf("Enter number of items in the shop: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        printf("Enter price of item %d: ", i + 1);
+        scanf("%f", &price[i]);
+    }
+
+    printf("Enter item price to search: ");
+    scanf("%f", &search);
+
+    // Linear search
+    for(i = 0; i < n; i++) {
+        if(price[i] == search) {
+            printf("Item with price %.2f found at position %d\n", search, i + 1);
+            found = 1;
+            break;
+        }
+    }
+
+    if(!found) {
+        printf("Item with price %.2f not found in the shop\n", search);
+    }
+
+    return 0;
+}
